@@ -194,4 +194,4 @@ curl -X POST http://localhost:5000/api/admin/build_knowledge \
 本项目仅供学习和研究使用。
 
 ## 联系方式
-如有问题，请联系项目维护者。
+如有问题，请联系项目维护者。"# hlg_eu"  
