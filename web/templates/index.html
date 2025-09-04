@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东方智答 - 黑龙江东方学院智能问答系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>东方智答</h1>
+            <p class="subtitle">黑龙江东方学院智能问答系统</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message system">
+                        <div class="message-content">
+                            您好！我是东方智答，黑龙江东方学院的智能助手。有什么可以帮助您的吗？
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="请输入您的问题..." />
+                    <button id="send-btn" onclick="sendMessage()">发送</button>
+                </div>
+
+                <div class="quick-questions">
+                    <h3>快速提问：</h3>
+                    <div class="quick-question-list">
+                        <button class="quick-btn" onclick="quickQuestion('学校在哪个城市')">学校在哪个城市？</button>
+                        <button class="quick-btn" onclick="quickQuestion('学校官网')">学校官网是什么？</button>
+                        <button class="quick-btn" onclick="quickQuestion('如何联系学校')">如何联系学校？</button>
+                        <button class="quick-btn" onclick="quickQuestion('学校是公办还是民办')">学校性质？</button>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="info-card">
+                    <h3>系统信息</h3>
+                    <div id="statistics">
+                        <p>加载中...</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>热门问题</h3>
+                    <div id="hot-questions">
+                        <p>加载中...</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>相关链接</h3>
+                    <ul class="links">
+                        <li><a href="https://www.hljeu.edu.cn" target="_blank">学校官网</a></li>
+                        <li><a href="https://www.hljeu.edu.cn/zsxx/" target="_blank">招生信息</a></li>
+                        <li><a href="https://www.hljeu.edu.cn/jyjx/" target="_blank">教育教学</a></li>
+                        <li><a href="https://www.hljeu.edu.cn/kxyj/" target="_blank">科学研究</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 黑龙江东方学院 东方智答智能问答系统</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
